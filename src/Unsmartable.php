@@ -19,18 +19,42 @@ trait Unsmartable
     {
         $content = preg_replace('/\s+/', ' ',  $content); 
 
-        $search = array(chr(145),
+        $rawContent = html_entity_decode($content);
+
+        $search = array(
+                    chr(9),
+                    chr(10),
+                    chr(11),
+                    chr(12),
+                    chr(13),
+                    chr(14),
+                    chr(145),
                     chr(146),
                     chr(147),
-                    chr(148),
+                    '‘',
+                    '’',
+                    '“',
+                    '”',
+                    chr('—'),
                     chr(151));
  
-        $replace = array("'",
+        $replace = array(
+                        " ",
+                        " ",
+                        " ",
+                        " ",
+                        " ",
+                        " ",
+                        "'",
+                        "'",
+                        "'",
+                        "'",
                         "'",
                         '"',
                         '"',
+                        '-',
                         '-');
     
-        return str_replace($search, $replace, $content); 
+         return str_replace($search, $replace, $rawContent);  
     }
 }
