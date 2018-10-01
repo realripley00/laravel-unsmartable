@@ -4,7 +4,7 @@ namespace RealRipley\Unsmartable;
 
 use Illuminate\Support\ServiceProvider;
 
-class UnsmartableProvider extends ServiceProvider
+class UnsmartableServiceProvider extends ServiceProvider
 {
     public function boot()
     {
