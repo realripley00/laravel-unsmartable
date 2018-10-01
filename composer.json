@@ -30,7 +30,7 @@
                 "RealRipley\\Unsmartable\\UnsmartableServiceProvider"
             ],
             "aliases": {
-                "Buildable": "RealRipley\\Unsmartable\\Unsmartable"
+                "Unsmartable": "RealRipley\\Unsmartable\\Unsmartable"
             }
         }
     }
