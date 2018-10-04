@@ -35,7 +35,8 @@ trait Unsmartable
                     '’',
                     '“',
                     '”',
-                    chr('—'),
+                    '—',
+                    '–',
                     chr(151));
  
         $replace = array(
@@ -52,6 +53,7 @@ trait Unsmartable
                         "'",
                         '"',
                         '"',
+                        '-',
                         '-',
                         '-');
     
